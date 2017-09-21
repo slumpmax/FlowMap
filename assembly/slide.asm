@@ -303,9 +303,10 @@ SETSC_WAIT2:
 
 ; Put 32 hardware sprites
 PUTHARD:
-		push	bc
-		push	de
-		push	hl
+		exx
+		;push	bc
+		;push	de
+		;push	hl
 		ld	a,(POSX)
 		and	15
 		ld	d,a
@@ -352,9 +353,10 @@ NO_216:
 		dec	b
 		jr	nz,LOOP_PUTHARD
 		ei
-		pop	hl
-		pop	de
-		pop	bc
+		exx
+		;pop	hl
+		;pop	de
+		;pop	bc
 		ret
 
 ; === USR2 - Set display to page (n) ===
