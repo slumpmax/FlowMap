@@ -10,7 +10,7 @@
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    width="2631.9597"
-   height="1383.136"
+   height="1486.5964"
    id="svg2"
    version="1.1"
    inkscape:version="0.92pre2 15127"
@@ -18,7 +18,7 @@
    inkscape:export-filename="FlowMap.png"
    inkscape:export-xdpi="72.947273"
    inkscape:export-ydpi="72.947273"
-   viewBox="0 0 2631.9597 1383.136">
+   viewBox="0 0 2631.9597 1486.5965">
   <defs
      id="defs4">
     <marker
@@ -127,9 +127,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.4374118"
-     inkscape:cx="1315.9799"
-     inkscape:cy="691.56799"
+     inkscape:zoom="0.57554235"
+     inkscape:cx="454.49122"
+     inkscape:cy="908.32735"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -151,7 +151,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -161,13 +161,13 @@
      id="layer1"
      transform="translate(54.913288,21.877577)">
     <rect
-       style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3.28706622;marker:none;enable-background:accumulate"
+       style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3.40778804;marker:none;enable-background:accumulate"
        id="rect3512"
        width="2631.9597"
-       height="1383.136"
+       height="1486.5964"
        x="-54.913288"
        y="-21.877577"
-       ry="0.0023860354" />
+       ry="0.0025645141" />
     <rect
        ry="0.0027866468"
        y="24.6576"
@@ -1727,6 +1727,14 @@
          id="tspan3959"
          sodipodi:role="line">0</tspan></text>
     <rect
+       ry="0.0028688028"
+       y="585.92993"
+       x="538.92133"
+       height="469.48819"
+       width="35.433071"
+       id="rect5054"
+       style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;marker:none;enable-background:accumulate" />
+    <rect
        style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#00ffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;marker:none;enable-background:accumulate"
        id="rect3965"
        width="35.433071"
@@ -2058,6 +2066,14 @@
        width="35.433071"
        id="rect4246"
        style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#00ffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;marker:none;enable-background:accumulate" />
+    <rect
+       style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;marker:none;enable-background:accumulate"
+       id="rect5056"
+       width="35.433071"
+       height="469.48819"
+       x="7.9252586"
+       y="585.92993"
+       ry="0.0028688028" />
     <text
        id="text4248"
        y="618.19324"
@@ -2084,16 +2100,24 @@
        width="35.433071"
        id="rect4075"
        style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#ff8080;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;marker:none;enable-background:accumulate" />
+    <rect
+       style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#00ffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.70326024;stroke-miterlimit:4;stroke-dasharray:none;marker:none;enable-background:accumulate"
+       id="rect5046"
+       width="17.513239"
+       height="469.78494"
+       x="713.42816"
+       y="585.78156"
+       ry="0.002870616" />
     <text
        id="text4077"
        y="618.19324"
-       x="713.98621"
+       x="721.58771"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:36px;line-height:100%;font-family:'TF Phethai';-inkscape-font-specification:'TF Phethai';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#ff00ff;fill-opacity:1;stroke:none"
        xml:space="preserve"><tspan
          y="618.19324"
-         x="713.98621"
+         x="721.58771"
          id="tspan4079"
-         sodipodi:role="line">2</tspan></text>
+         sodipodi:role="line">0</tspan></text>
     <rect
        style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#ff8080;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;marker:none;enable-background:accumulate"
        id="rect4081"
@@ -2318,16 +2342,26 @@
        x="1155.99"
        y="585.92993"
        ry="0.0028688028" />
+    <rect
+       style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#ff8080;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.70721412;stroke-miterlimit:4;stroke-dasharray:none;marker:none;enable-background:accumulate"
+       id="rect4992"
+       width="17.716263"
+       height="469.63797"
+       x="1156.3945"
+       y="585.81439"
+       ry="0.002869718" />
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:36px;line-height:100%;font-family:'TF Phethai';-inkscape-font-specification:'TF Phethai';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#ff00ff;fill-opacity:1;stroke:none"
-       x="1173.7043"
-       y="618.19324"
-       id="text4155"><tspan
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:27.23836517px;line-height:100%;font-family:'TF Phethai';-inkscape-font-specification:'TF Phethai';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#ff00ff;fill-opacity:1;stroke:none;stroke-width:0.75662124"
+       x="1563.6569"
+       y="467.73813"
+       id="text4155"
+       transform="scale(0.75662123,1.3216653)"><tspan
          sodipodi:role="line"
          id="tspan4157"
-         x="1173.7043"
-         y="618.19324">13</tspan></text>
+         x="1563.6569"
+         y="467.73813"
+         style="stroke-width:0.75662124">13</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:144px;line-height:100%;font-family:'TF Phethai';-inkscape-font-specification:'TF Phethai';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#0000ff;fill-opacity:1;stroke:#ffffff;stroke-width:4;stroke-miterlimit:4;stroke-dasharray:none"
@@ -2346,16 +2380,26 @@
        width="35.433071"
        id="rect4163"
        style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#00ffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;marker:none;enable-background:accumulate" />
+    <rect
+       ry="0.002869718"
+       y="585.81439"
+       x="1191.327"
+       height="469.63797"
+       width="17.716263"
+       id="rect4994"
+       style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.70721412;stroke-miterlimit:4;stroke-dasharray:none;marker:none;enable-background:accumulate" />
     <text
        id="text4165"
-       y="618.19324"
-       x="1209.1373"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:36px;line-height:100%;font-family:'TF Phethai';-inkscape-font-specification:'TF Phethai';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#ff00ff;fill-opacity:1;stroke:none"
-       xml:space="preserve"><tspan
-         y="618.19324"
-         x="1209.1373"
+       y="484.09711"
+       x="1554.6523"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:28.19101715px;line-height:100%;font-family:'TF Phethai';-inkscape-font-specification:'TF Phethai';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#ff00ff;fill-opacity:1;stroke:none;stroke-width:0.78308386"
+       xml:space="preserve"
+       transform="scale(0.78308383,1.2770025)"><tspan
+         y="484.09711"
+         x="1554.6523"
          id="tspan4167"
-         sodipodi:role="line">14</tspan></text>
+         sodipodi:role="line"
+         style="stroke-width:0.78308386">14</tspan></text>
     <rect
        style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#ff8080;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;marker:none;enable-background:accumulate"
        id="rect4069"
@@ -2662,6 +2706,14 @@
        width="35.433071"
        id="rect4361"
        style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#ff8080;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;marker:none;enable-background:accumulate" />
+    <rect
+       style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#ff8080;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.96783578;stroke-miterlimit:4;stroke-dasharray:none;marker:none;enable-background:accumulate"
+       id="rect5000"
+       width="33.188103"
+       height="469.52036"
+       x="1809.3828"
+       y="585.91388"
+       ry="0.0028689993" />
     <text
        id="text4363"
        y="618.19324"
@@ -2698,6 +2750,14 @@
        x="1844.332"
        y="585.92993"
        ry="0.0028688028" />
+    <rect
+       ry="0.0028689993"
+       y="585.91388"
+       x="1844.3159"
+       height="469.52036"
+       width="33.188103"
+       id="rect5002"
+       style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.96783578;stroke-miterlimit:4;stroke-dasharray:none;marker:none;enable-background:accumulate" />
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:36px;line-height:100%;font-family:'TF Phethai';-inkscape-font-specification:'TF Phethai';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#ff00ff;fill-opacity:1;stroke:none"
@@ -2720,15 +2780,15 @@
        style="fill:none;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:none;marker-end:url(#Arrow2Mend)" />
     <g
        id="g4981"
-       transform="translate(1280.3234)">
+       transform="translate(1915.3878)">
       <rect
-         ry="0.0021195468"
+         ry="0.0031542943"
          y="1112.9397"
          x="-2.4193473"
-         height="205.30273"
+         height="305.53006"
          width="602.70319"
          id="rect3594"
-         style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#ff8080;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3.1598618;marker:none;enable-background:accumulate" />
+         style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#ff8080;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3.85476327;marker:none;enable-background:accumulate" />
       <text
          transform="scale(0.96830083,1.0327369)"
          id="text3412"
@@ -2740,12 +2800,12 @@
            y="1105.8416"
            x="44.640251"
            id="tspan3414"
-           sodipodi:role="line">[15 --&gt; 0]</tspan><tspan
+           sodipodi:role="line">[15 --&gt; PX=0]</tspan><tspan
            style="stroke-width:0.96830082"
            id="tspan3472"
            y="1144.3401"
            x="44.640251"
-           sodipodi:role="line">1. delete 1-PG, IX=240, NX=16</tspan><tspan
+           sodipodi:role="line">1. fill black BP, IX=240, NX=16</tspan><tspan
            style="stroke-width:0.96830082"
            id="tspan3474"
            y="1182.8386"
@@ -2755,24 +2815,24 @@
            id="tspan3476"
            y="1221.337"
            x="44.640251"
-           sodipodi:role="line">3. draw 1-PG, IX=0, NX=16 with MX-1</tspan><tspan
+           sodipodi:role="line">3. draw BP, IX=0, NX=16 with MX-1</tspan><tspan
            style="stroke-width:0.96830082"
            id="tspan3444"
            y="1259.8356"
            x="44.640251"
-           sodipodi:role="line">4. draw 1-PG, IX=255, NX=1 with MX+14</tspan></text>
+           sodipodi:role="line">4. draw BP, IX=255, NX=1 with MX+14</tspan></text>
     </g>
     <g
        id="g4999"
-       transform="matrix(0.9564622,0,0,1,-567.27999,0)">
+       transform="matrix(0.9564622,0,0,1,-1201.7289,0)">
       <rect
-         ry="0.0021195468"
+         ry="0.0031542943"
          y="1112.9397"
          x="1264.0238"
-         height="205.30273"
+         height="305.53006"
          width="630.12146"
          id="rect3588"
-         style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#00ffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3;marker:none;enable-background:accumulate" />
+         style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#00ffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3.65974545;marker:none;enable-background:accumulate" />
       <text
          transform="scale(0.97484059,1.0258087)"
          xml:space="preserve"
@@ -2784,7 +2844,7 @@
            id="tspan3510"
            sodipodi:role="line"
            x="1313.735"
-           y="1113.3102">[14 &lt;-- 15]</tspan><tspan
+           y="1113.3102">[PX=0 &lt;-- 1]</tspan><tspan
            style="stroke-width:0.97484058"
            sodipodi:role="line"
            x="1313.735"
@@ -2794,104 +2854,137 @@
            sodipodi:role="line"
            x="1313.735"
            y="1190.8273"
-           id="tspan3430">2. delete PG, IX=240+PX, NX=1</tspan><tspan
+           id="tspan3430">2. fill black FP, IX=240+PX, NX=1</tspan><tspan
            style="stroke-width:0.97484058"
            id="tspan3443"
            sodipodi:role="line"
            x="1313.735"
-           y="1229.5857">3. draw PG, IX=PX with MX, NX=1</tspan><tspan
+           y="1229.5857">3. draw FP, IX=PX with MX, NX=1</tspan><tspan
            style="stroke-width:0.97484058"
            id="tspan3454"
            sodipodi:role="line"
            x="1313.735"
-           y="1268.3442">4. draw 1-PG, IX=PX*16, NX=16 with MX+PX-1</tspan></text>
+           y="1268.3442">4. draw BP, IX=PX*16, NX=16 with MX+PX-1</tspan></text>
     </g>
     <g
        id="g4990"
-       transform="matrix(0.95382119,0,0,1,-591.41301,0)">
+       transform="matrix(0.95382119,0,0,1,43.541637,0)">
       <rect
-         style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#ff8080;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3;marker:none;enable-background:accumulate"
+         style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#ff8080;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3.65974545;marker:none;enable-background:accumulate"
          id="rect3592"
          width="630.12146"
-         height="205.30273"
+         height="305.53006"
          x="627.83075"
          y="1112.9397"
-         ry="0.0021195468" />
+         ry="0.0031542943" />
       <text
-         transform="scale(0.97048513,1.0304125)"
+         transform="scale(0.94180434,1.0617917)"
          xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:38.58535385px;line-height:100%;font-family:'TF Phethai';-inkscape-font-specification:'TF Phethai';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.97048515"
-         x="656.44904"
-         y="1108.3361"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:37.44503784px;line-height:37.44503784px;font-family:'TF Phethai';-inkscape-font-specification:'TF Phethai';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.94180435"
+         x="676.47925"
+         y="1075.5814"
          id="text3437"><tspan
-           style="stroke-width:0.97048515"
+           style="line-height:37.44503784px;stroke-width:0.94180435"
            sodipodi:role="line"
-           x="656.44904"
-           y="1108.3361"
-           id="tspan3451">[0 --&gt; 1]</tspan><tspan
-           style="stroke-width:0.97048515"
+           x="676.47925"
+           y="1075.5814"
+           id="tspan3451">[7 --&gt; PX=8]</tspan><tspan
+           style="line-height:37.44503784px;stroke-width:0.94180435"
            sodipodi:role="line"
-           x="656.44904"
-           y="1146.9214"
-           id="tspan3453">1. set adjust</tspan><tspan
-           style="stroke-width:0.97048515"
+           x="676.47925"
+           y="1113.0265"
+           id="tspan4978">1 draw BP, IX=224+PX-1 with MX+15, NX=1</tspan><tspan
+           style="line-height:37.44503784px;stroke-width:0.94180435"
            sodipodi:role="line"
-           x="656.44904"
-           y="1185.5067"
-           id="tspan3455">2. delete PG, IX=PX-1, NX=1</tspan><tspan
-           style="stroke-width:0.97048515"
+           x="676.47925"
+           y="1150.4714"
+           id="tspan3453">2. set adjust</tspan><tspan
+           style="line-height:37.44503784px;stroke-width:0.94180435"
+           sodipodi:role="line"
+           x="676.47925"
+           y="1187.9165"
+           id="tspan3455">3. fill black FP, IX=PX-1, NX=1</tspan><tspan
+           style="line-height:37.44503784px;stroke-width:0.94180435"
            id="tspan3447"
            sodipodi:role="line"
-           x="656.44904"
-           y="1224.0922">3. draw PG, IX=240+PX-1 with MX+15, NX=1</tspan><tspan
-           style="stroke-width:0.97048515"
+           x="676.47925"
+           y="1225.3616">4 copy BP, IX=224+PX-1 to FP, IX=240+PX-1, NX=1</tspan><tspan
+           style="line-height:37.44503784px;stroke-width:0.94180435"
            sodipodi:role="line"
-           x="656.44904"
-           y="1262.6775"
-           id="tspan3459">4. draw 1-PG, IX=(PX-1)*16, NX=16 with MX+PX</tspan></text>
+           x="676.47925"
+           y="1262.8066"
+           id="tspan3459">5. draw BP, IX=(PX-1)*16, NX=16 with MX+PX</tspan><tspan
+           style="line-height:37.44503784px;stroke-width:0.94180435"
+           sodipodi:role="line"
+           x="676.47925"
+           y="1300.2517"
+           id="tspan4986">6 *** fill black BP, IX=240+PX-1, NX=1</tspan></text>
     </g>
     <g
-       id="g5008">
+       id="g5008"
+       transform="translate(-636.08392)">
       <rect
-         style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#00ffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3.08802795;marker:none;enable-background:accumulate"
+         style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#00ffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3.76713204;marker:none;enable-background:accumulate"
          id="rect3590"
          width="604.05792"
-         height="205.30273"
+         height="305.53006"
          x="1913.1395"
          y="1112.9397"
-         ry="0.0021195468" />
+         ry="0.0031542943" />
       <text
          transform="scale(0.96926386,1.0317108)"
          id="text3461"
          y="1106.9413"
          x="2012.9436"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:38.53679657px;line-height:100%;font-family:'TF Phethai';-inkscape-font-specification:'TF Phethai';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.96926385"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:38.53679657px;line-height:38.53679657px;font-family:'TF Phethai';-inkscape-font-specification:'TF Phethai';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.96926385"
          xml:space="preserve"><tspan
-           style="stroke-width:0.96926385"
+           style="line-height:38.53679657px;stroke-width:0.96926385"
            y="1106.9413"
            x="2012.9436"
            id="tspan3463"
-           sodipodi:role="line">[15 &lt;-- 0]</tspan><tspan
-           style="stroke-width:0.96926385"
+           sodipodi:role="line">[PX=15 &lt;-- 0]</tspan><tspan
+           style="line-height:38.53679657px;stroke-width:0.96926385"
            y="1145.478"
            x="2012.9436"
            sodipodi:role="line"
-           id="tspan3465">1. delete 1-PG, IX=0, NX=15</tspan><tspan
-           style="stroke-width:0.96926385"
+           id="tspan3465">1. fill black BP, IX=0, NX=15</tspan><tspan
+           style="line-height:38.53679657px;stroke-width:0.96926385"
            y="1184.0149"
            x="2012.9436"
            sodipodi:role="line"
-           id="tspan3467">2. delete 1-PG, IX=255, NX=1</tspan><tspan
-           style="stroke-width:0.96926385"
+           id="tspan3467">2. fill black BP, IX=255, NX=1</tspan><tspan
+           style="line-height:38.53679657px;stroke-width:0.96926385"
            y="1222.5516"
            x="2012.9436"
            sodipodi:role="line"
            id="tspan3469">3. swap page</tspan><tspan
-           style="stroke-width:0.96926385"
+           style="line-height:38.53679657px;stroke-width:0.96926385"
            y="1261.0885"
            x="2012.9436"
            sodipodi:role="line"
-           id="tspan3483">4. draw 1-PG, IX=240, NX=16 with MX+14</tspan></text>
+           id="tspan3483">4. draw BP, IX=240, NX=16 with MX+14</tspan></text>
     </g>
+    <text
+       transform="scale(0.75662122,1.3216653)"
+       id="text4998"
+       y="467.73813"
+       x="1540.1547"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:27.23836517px;line-height:100%;font-family:'TF Phethai';-inkscape-font-specification:'TF Phethai';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#ff00ff;fill-opacity:1;stroke:none;stroke-width:0.75662124"
+       xml:space="preserve"><tspan
+         style="stroke-width:0.75662124"
+         y="467.73813"
+         x="1540.1547"
+         id="tspan4996"
+         sodipodi:role="line">15</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:36px;line-height:100%;font-family:'TF Phethai';-inkscape-font-specification:'TF Phethai';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#ff00ff;fill-opacity:1;stroke:none"
+       x="704.21283"
+       y="618.19324"
+       id="text5052"><tspan
+         sodipodi:role="line"
+         id="tspan5050"
+         x="704.21283"
+         y="618.19324">2</tspan></text>
   </g>
 </svg>
