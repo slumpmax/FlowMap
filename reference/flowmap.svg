@@ -14,7 +14,7 @@
    id="svg2"
    version="1.1"
    inkscape:version="0.92pre2 15127"
-   sodipodi:docname="FlowMap.svg"
+   sodipodi:docname="flowmap.svg"
    inkscape:export-filename="FlowMap.png"
    inkscape:export-xdpi="72.947273"
    inkscape:export-ydpi="72.947273"
@@ -127,9 +127,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.30929685"
-     inkscape:cx="1130.3945"
-     inkscape:cy="696.15626"
+     inkscape:zoom="0.4374118"
+     inkscape:cx="1315.9799"
+     inkscape:cy="691.56799"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -2718,165 +2718,180 @@
        id="path4484"
        d="m 1875.928,674.70938 h -25.3086"
        style="fill:none;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:none;marker-end:url(#Arrow2Mend)" />
-    <rect
-       style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#ff8080;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3;marker:none;enable-background:accumulate"
-       id="rect3594"
-       width="543.26263"
-       height="205.30273"
-       x="36.974453"
-       y="1112.9397"
-       ry="0.0021195468" />
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:38.49850845px;line-height:100%;font-family:'TF Phethai';-inkscape-font-specification:'TF Phethai';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.96830082"
-       x="53.112755"
-       y="1105.8416"
-       id="text3412"
-       transform="scale(0.96830083,1.0327369)"><tspan
-         sodipodi:role="line"
-         id="tspan3414"
-         x="53.112755"
+    <g
+       id="g4981"
+       transform="translate(1280.3234)">
+      <rect
+         ry="0.0021195468"
+         y="1112.9397"
+         x="-2.4193473"
+         height="205.30273"
+         width="602.70319"
+         id="rect3594"
+         style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#ff8080;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3.1598618;marker:none;enable-background:accumulate" />
+      <text
+         transform="scale(0.96830083,1.0327369)"
+         id="text3412"
          y="1105.8416"
-         style="stroke-width:0.96830082">[15 --&gt; 0]</tspan><tspan
-         sodipodi:role="line"
-         x="53.112755"
-         y="1145.6003"
-         id="tspan3472"
-         style="stroke-width:0.96830082">1. delete 1-PG, IX=240, NX=16</tspan><tspan
-         sodipodi:role="line"
-         x="53.112755"
-         y="1185.3593"
-         id="tspan3474"
-         style="stroke-width:0.96830082">2. swap page</tspan><tspan
-         sodipodi:role="line"
-         x="53.112755"
-         y="1225.118"
-         id="tspan3476"
-         style="stroke-width:0.96830082">3. draw 1-PG, IX=0, NX=16 with MX-1</tspan><tspan
-         sodipodi:role="line"
-         x="53.112755"
-         y="1264.8768"
-         id="tspan3444"
-         style="stroke-width:0.96830082">4. draw 1-PG, IX=255, NX=1 with MX+14</tspan></text>
-    <rect
-       style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#00ffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3;marker:none;enable-background:accumulate"
-       id="rect3588"
-       width="630.12146"
-       height="205.30273"
-       x="1264.0238"
-       y="1112.9397"
-       ry="0.0021195468" />
-    <text
-       id="text3424"
-       y="1113.3102"
-       x="1313.735"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:38.75852203px;line-height:100%;font-family:'TF Phethai';-inkscape-font-specification:'TF Phethai';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.97484058"
-       xml:space="preserve"
-       transform="scale(0.97484059,1.0258087)"><tspan
+         x="44.640251"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:38.49850845px;line-height:100%;font-family:'TF Phethai';-inkscape-font-specification:'TF Phethai';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.96830082"
+         xml:space="preserve"><tspan
+           style="stroke-width:0.96830082"
+           y="1105.8416"
+           x="44.640251"
+           id="tspan3414"
+           sodipodi:role="line">[15 --&gt; 0]</tspan><tspan
+           style="stroke-width:0.96830082"
+           id="tspan3472"
+           y="1144.3401"
+           x="44.640251"
+           sodipodi:role="line">1. delete 1-PG, IX=240, NX=16</tspan><tspan
+           style="stroke-width:0.96830082"
+           id="tspan3474"
+           y="1182.8386"
+           x="44.640251"
+           sodipodi:role="line">2. swap page</tspan><tspan
+           style="stroke-width:0.96830082"
+           id="tspan3476"
+           y="1221.337"
+           x="44.640251"
+           sodipodi:role="line">3. draw 1-PG, IX=0, NX=16 with MX-1</tspan><tspan
+           style="stroke-width:0.96830082"
+           id="tspan3444"
+           y="1259.8356"
+           x="44.640251"
+           sodipodi:role="line">4. draw 1-PG, IX=255, NX=1 with MX+14</tspan></text>
+    </g>
+    <g
+       id="g4999"
+       transform="matrix(0.9564622,0,0,1,-567.27999,0)">
+      <rect
+         ry="0.0021195468"
+         y="1112.9397"
+         x="1264.0238"
+         height="205.30273"
+         width="630.12146"
+         id="rect3588"
+         style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#00ffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3;marker:none;enable-background:accumulate" />
+      <text
+         transform="scale(0.97484059,1.0258087)"
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:38.75852203px;line-height:100%;font-family:'TF Phethai';-inkscape-font-specification:'TF Phethai';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.97484058"
+         x="1313.735"
          y="1113.3102"
-         x="1313.735"
-         sodipodi:role="line"
-         id="tspan3510"
-         style="stroke-width:0.97484058">[14 &lt;-- 15]</tspan><tspan
-         id="tspan3428"
-         y="1153.069"
-         x="1313.735"
-         sodipodi:role="line"
-         style="stroke-width:0.97484058">1. set adjust</tspan><tspan
-         id="tspan3430"
-         y="1192.8279"
-         x="1313.735"
-         sodipodi:role="line"
-         style="stroke-width:0.97484058">2. delete PG, IX=240+PX, NX=1</tspan><tspan
-         y="1232.5867"
-         x="1313.735"
-         sodipodi:role="line"
-         id="tspan3443"
-         style="stroke-width:0.97484058">3. draw PG, IX=PX with MX, NX=1</tspan><tspan
-         y="1272.3455"
-         x="1313.735"
-         sodipodi:role="line"
-         id="tspan3454"
-         style="stroke-width:0.97484058">4. draw 1-PG, IX=PX*16, NX=16 with MX+PX-1</tspan></text>
-    <rect
-       ry="0.0021195468"
-       y="1112.9397"
-       x="627.83075"
-       height="205.30273"
-       width="630.12146"
-       id="rect3592"
-       style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#ff8080;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3;marker:none;enable-background:accumulate" />
-    <text
-       id="text3437"
-       y="1108.3361"
-       x="656.44904"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:38.58535385px;line-height:100%;font-family:'TF Phethai';-inkscape-font-specification:'TF Phethai';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.97048515"
-       xml:space="preserve"
-       transform="scale(0.97048513,1.0304125)"><tspan
-         id="tspan3451"
+         id="text3424"><tspan
+           style="stroke-width:0.97484058"
+           id="tspan3510"
+           sodipodi:role="line"
+           x="1313.735"
+           y="1113.3102">[14 &lt;-- 15]</tspan><tspan
+           style="stroke-width:0.97484058"
+           sodipodi:role="line"
+           x="1313.735"
+           y="1152.0687"
+           id="tspan3428">1. set adjust</tspan><tspan
+           style="stroke-width:0.97484058"
+           sodipodi:role="line"
+           x="1313.735"
+           y="1190.8273"
+           id="tspan3430">2. delete PG, IX=240+PX, NX=1</tspan><tspan
+           style="stroke-width:0.97484058"
+           id="tspan3443"
+           sodipodi:role="line"
+           x="1313.735"
+           y="1229.5857">3. draw PG, IX=PX with MX, NX=1</tspan><tspan
+           style="stroke-width:0.97484058"
+           id="tspan3454"
+           sodipodi:role="line"
+           x="1313.735"
+           y="1268.3442">4. draw 1-PG, IX=PX*16, NX=16 with MX+PX-1</tspan></text>
+    </g>
+    <g
+       id="g4990"
+       transform="matrix(0.95382119,0,0,1,-591.41301,0)">
+      <rect
+         style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#ff8080;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3;marker:none;enable-background:accumulate"
+         id="rect3592"
+         width="630.12146"
+         height="205.30273"
+         x="627.83075"
+         y="1112.9397"
+         ry="0.0021195468" />
+      <text
+         transform="scale(0.97048513,1.0304125)"
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:38.58535385px;line-height:100%;font-family:'TF Phethai';-inkscape-font-specification:'TF Phethai';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.97048515"
+         x="656.44904"
          y="1108.3361"
-         x="656.44904"
-         sodipodi:role="line"
-         style="stroke-width:0.97048515">[0 --&gt; 1]</tspan><tspan
-         id="tspan3453"
-         y="1148.0948"
-         x="656.44904"
-         sodipodi:role="line"
-         style="stroke-width:0.97048515">1. set adjust</tspan><tspan
-         id="tspan3455"
-         y="1187.8538"
-         x="656.44904"
-         sodipodi:role="line"
-         style="stroke-width:0.97048515">2. delete PG, IX=PX-1, NX=1</tspan><tspan
-         y="1227.6125"
-         x="656.44904"
-         sodipodi:role="line"
-         id="tspan3447"
-         style="stroke-width:0.97048515">3. draw PG, IX=240+PX-1 with MX+15, NX=1</tspan><tspan
-         id="tspan3459"
-         y="1267.3713"
-         x="656.44904"
-         sodipodi:role="line"
-         style="stroke-width:0.97048515">4. draw 1-PG, IX=(PX-1)*16, NX=16 with MX+PX</tspan></text>
-    <rect
-       ry="0.0021195468"
-       y="1112.9397"
-       x="1929.2651"
-       height="205.30273"
-       width="570.10992"
-       id="rect3590"
-       style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#00ffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3;marker:none;enable-background:accumulate" />
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:38.53679657px;line-height:100%;font-family:'TF Phethai';-inkscape-font-specification:'TF Phethai';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.96926385"
-       x="2009.2892"
-       y="1106.9413"
-       id="text3461"
-       transform="scale(0.96926386,1.0317108)"><tspan
-         sodipodi:role="line"
-         id="tspan3463"
-         x="2009.2892"
+         id="text3437"><tspan
+           style="stroke-width:0.97048515"
+           sodipodi:role="line"
+           x="656.44904"
+           y="1108.3361"
+           id="tspan3451">[0 --&gt; 1]</tspan><tspan
+           style="stroke-width:0.97048515"
+           sodipodi:role="line"
+           x="656.44904"
+           y="1146.9214"
+           id="tspan3453">1. set adjust</tspan><tspan
+           style="stroke-width:0.97048515"
+           sodipodi:role="line"
+           x="656.44904"
+           y="1185.5067"
+           id="tspan3455">2. delete PG, IX=PX-1, NX=1</tspan><tspan
+           style="stroke-width:0.97048515"
+           id="tspan3447"
+           sodipodi:role="line"
+           x="656.44904"
+           y="1224.0922">3. draw PG, IX=240+PX-1 with MX+15, NX=1</tspan><tspan
+           style="stroke-width:0.97048515"
+           sodipodi:role="line"
+           x="656.44904"
+           y="1262.6775"
+           id="tspan3459">4. draw 1-PG, IX=(PX-1)*16, NX=16 with MX+PX</tspan></text>
+    </g>
+    <g
+       id="g5008">
+      <rect
+         style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#00ffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3.08802795;marker:none;enable-background:accumulate"
+         id="rect3590"
+         width="604.05792"
+         height="205.30273"
+         x="1913.1395"
+         y="1112.9397"
+         ry="0.0021195468" />
+      <text
+         transform="scale(0.96926386,1.0317108)"
+         id="text3461"
          y="1106.9413"
-         style="stroke-width:0.96926385">[15 &lt;-- 0]</tspan><tspan
-         id="tspan3465"
-         sodipodi:role="line"
-         x="2009.2892"
-         y="1146.7001"
-         style="stroke-width:0.96926385">1. delete 1-PG, IX=0, NX=15</tspan><tspan
-         id="tspan3467"
-         sodipodi:role="line"
-         x="2009.2892"
-         y="1186.459"
-         style="stroke-width:0.96926385">2. delete 1-PG, IX=255, NX=1</tspan><tspan
-         id="tspan3469"
-         sodipodi:role="line"
-         x="2009.2892"
-         y="1226.2178"
-         style="stroke-width:0.96926385">3. swap page</tspan><tspan
-         id="tspan3483"
-         sodipodi:role="line"
-         x="2009.2892"
-         y="1265.9766"
-         style="stroke-width:0.96926385">4. draw 1-PG, IX=240, NX=16 with MX+14</tspan></text>
+         x="2012.9436"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:38.53679657px;line-height:100%;font-family:'TF Phethai';-inkscape-font-specification:'TF Phethai';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.96926385"
+         xml:space="preserve"><tspan
+           style="stroke-width:0.96926385"
+           y="1106.9413"
+           x="2012.9436"
+           id="tspan3463"
+           sodipodi:role="line">[15 &lt;-- 0]</tspan><tspan
+           style="stroke-width:0.96926385"
+           y="1145.478"
+           x="2012.9436"
+           sodipodi:role="line"
+           id="tspan3465">1. delete 1-PG, IX=0, NX=15</tspan><tspan
+           style="stroke-width:0.96926385"
+           y="1184.0149"
+           x="2012.9436"
+           sodipodi:role="line"
+           id="tspan3467">2. delete 1-PG, IX=255, NX=1</tspan><tspan
+           style="stroke-width:0.96926385"
+           y="1222.5516"
+           x="2012.9436"
+           sodipodi:role="line"
+           id="tspan3469">3. swap page</tspan><tspan
+           style="stroke-width:0.96926385"
+           y="1261.0885"
+           x="2012.9436"
+           sodipodi:role="line"
+           id="tspan3483">4. draw 1-PG, IX=240, NX=16 with MX+14</tspan></text>
+    </g>
   </g>
 </svg>
