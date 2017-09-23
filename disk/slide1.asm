@@ -67,16 +67,17 @@ PROGSTART	equ	0C000h
 	
 ; === Begin ===
 
-POSX:		dw	0000		;C000
-POSY:		dw	0000		;C002
+POSX:		dw	0000		;C000 World position X
+POSY:		dw	0000		;C002 World position Y
 POSYH		equ	POSY + 1
 
 MAPX:		db	00		;C004
 MAPY:		db	00		;C005
 PATX:		db	00		;C006
 PATY:		db	00		;C007
-MPAGE:		db	START_PAGE	;C008
-		db	00, 00, 00	;C009-C00B
+MPAGE:		db	START_PAGE	;C008 Current display page
+AMOUNT:		db	01		;C009 Scroll count
+		db	00, 00		;C00A-C00B
 OPOSX:		dw	0000		;C00C
 OPOSY:		dw	0000		;C00E
 
@@ -865,16 +866,25 @@ SCROLL:
 		jr	nc,SCROLLNO1
 		inc	d
 SCROLLNO1:
-		ld	hl,(POSX)
-		ld	(OPOSX),hl
-		ld	hl,(POSY)
-		ld	(OPOSY),hl
 		ld	a,(de)
 		ld	l,a
 		inc	de
 		ld	a,(de)
 		ld	h,a
-		jp	(hl)
+		ld	(SCROLL_RT - 2),hl
+		ld	a,(AMOUNT)
+SCROLL_LOOP:
+		ld	hl,(POSX)
+		ld	(OPOSX),hl
+		ld	hl,(POSY)
+		ld	(OPOSY),hl
+		push	af
+		call	NOSCROLL
+SCROLL_RT:
+		pop	af
+		dec	a
+		jr	nz,SCROLL_LOOP
+		ret
 
 SCROLLSUB:
 		dw	NOSCROLL
