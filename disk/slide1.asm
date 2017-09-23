@@ -5,6 +5,7 @@ VALTYPSTR	equ	3
 VALTYPSNG	equ	4
 VALTYPDBL	equ	5
 
+; VDP Commands
 CMDSTOP		equ	00h	; Stop
 CMDINVALID1	equ	10h	; Not used
 CMDINVALID2	equ	20h	; Not used
@@ -21,6 +22,18 @@ CMDHMMV		equ	0C0h	; High speed fill
 CMDHMMM		equ	0D0h	; High speed copy
 CMDYMMM		equ	0E0h	; High speed copy y-direction
 CMDHMMC		equ	0F0h	; High speed setpixels
+
+; VDP Command Logical Operations
+LCMD_IMP	equ	00h	; DES = SRC
+LCMD_AND	equ	01h	; DES = SRC and DES
+LCMD_OR		equ	02h	; DES = SRC or DES
+LCMD_EOR	equ	03h	; DES = SRC xor DES
+LCMD_NOT	equ	04h	; DES = not SRC
+LCMD_TIMP	equ	08h	; Ignore CL0, DES = SRC
+LCMD_TAND	equ	09h	; Ignore CL0, DES = SRC and DES
+LCMD_TOR	equ	0Ah	; Ignore CL0, DES = SRC or DES
+LCMD_TEOR	equ	0Bh	; Ignore CL0, DES = SRC xor DES
+LCMD_TNOT	equ	0Ch	; Ignore CL0, DES = not SRC
 
 VRAMPORT	equ	98h	; V9938 VRAM port
 VDPPORT		equ	99h	; V9938 Register port

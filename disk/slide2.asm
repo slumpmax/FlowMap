@@ -5,6 +5,7 @@ VALTYPSTR	equ	3
 VALTYPSNG	equ	4
 VALTYPDBL	equ	5
 
+; VDP Commands
 CMDSTOP		equ	00h	; Stop
 CMDINVALID1	equ	10h	; Not used
 CMDINVALID2	equ	20h	; Not used
@@ -21,6 +22,18 @@ CMDHMMV		equ	0C0h	; High speed fill
 CMDHMMM		equ	0D0h	; High speed copy
 CMDYMMM		equ	0E0h	; High speed copy y-direction
 CMDHMMC		equ	0F0h	; High speed setpixels
+
+; VDP Command Logical Operations
+LCMD_IMP	equ	00h	; DES = SRC
+LCMD_AND	equ	01h	; DES = SRC and DES
+LCMD_OR		equ	02h	; DES = SRC or DES
+LCMD_EOR	equ	03h	; DES = SRC xor DES
+LCMD_NOT	equ	04h	; DES = not SRC
+LCMD_TIMP	equ	08h	; Ignore CL0, DES = SRC
+LCMD_TAND	equ	09h	; Ignore CL0, DES = SRC and DES
+LCMD_TOR	equ	0Ah	; Ignore CL0, DES = SRC or DES
+LCMD_TEOR	equ	0Bh	; Ignore CL0, DES = SRC xor DES
+LCMD_TNOT	equ	0Ch	; Ignore CL0, DES = not SRC
 
 VRAMPORT	equ	98h	; V9938 VRAM port
 VDPPORT		equ	99h	; V9938 Register port
@@ -97,7 +110,7 @@ CMD:		db	00, 00		;C01E
 
 ; 32 hardware sprites location = db Y, X, N, C
 SPRTABLE:	db	240, 0, 0, 0	;C020
-		db	240, 0, 1 0
+		db	240, 0, 1, 0
 		db	240, 0, 2, 0
 		db	240, 0, 3, 0
 		db	240, 0, 4, 0
@@ -128,6 +141,10 @@ SPRTABLE:	db	240, 0, 0, 0	;C020
 		db	240, 0, 29, 0
 		db	240, 0, 30, 0
 		db	240, 0, 31, 0
+
+;Software sprite table [db X, FX, Y, Number]
+SOFTSPRITE:
+		db	100, 0, 180, $48
 
 ; === Execute V9938 command ===
 VDPEXEC:
@@ -640,83 +657,58 @@ DVTNO2:
 		jr	DVTLOOP1
 
 ; === Draw tile blocks to specified area ===
+; L=PX, E=PY, B=CX, C=CY (Virtual screen 240x212)
 DRAWAREA:
+		ld	a,(POSY)
+		add	a,e
+		ld	(DESY),a
+		ld	e,a
+		ld	a,0
+		adc	a,(POSYH)
+		ld	d,a
+		
+		
+		call	FETCHXY
+		ld	a,TILE_PAGE
+		ld	(SPAGE),a
+		ld	a,16
+		sub	l
+		ld	(CNTX),a
+		ld	a,CMDLMMM
+		ld	(CMD),a
+		ld	a,240
+INITLOOP1:
+		push	af
+		ld	a,(POSY)
+		ld	(DESY),a
+		call	DRAWHTILE
 		ld	a,(CNTX)
-		ld	b,a
-		ld	hl,(POSX)
+		ld	l,a
 		ld	a,(DESX)
 		add	a,l
-		jr	nc,DANO1
-		inc	h
-DANO1:
-		and	a
-		rra
-		jr	nc,DANO2
-		inc	b
-DANO2:
-		rlca
-		ld	l,a
-		and	0Fh
-		ld	(PATX),a
-		ld	a,l
-		rrca
-		rrca
-		rrca
-		rrca
-		and	0Fh
-		ld	l,a
-		ld	a,h
-		rlca
-		rlca
-		rlca
-		rlca
-		and	70h
-		or	l
-		ld	(MAPX),a
-		ld	a,b
+		ld	(DESX),a
+		ld	a,(MAPX)
 		inc	a
-		and	0FEh
+		and	7Fh
+		ld	(MAPX),a
+		pop	af
+		sub	l
+		jr	z,INITEND1
+		jr	c,INITEND1
+		ld	b,a
+		ld	c,16
+		cp	c
+		jr	nc,INITNO1
+		ld	c,a
+INITNO1:
+		ld	a,c
 		ld	(CNTX),a
-		ld	hl,(POSY)
-		ld	a,(DESY)
-		add	a,l
-		jr	nc,DANO3
-		inc	h
-DANO3:
-		ld	l,a
-		and	0Fh
-		ld	(PATY),a
-		ld	a,l
-		rrca
-		rrca
-		rrca
-		rrca
-		and	0Fh
-		ld	l,a
-		ld	a,h
-		rlca
-		rlca
-		rlca
-		rlca
-		and	70h
-		or	l
-		ld	(MAPY),a
-		ld	bc,(PATX)
-		ld	hl,(MAPX)
-		ld	a,(CNTX)
-		ld	d,a
-		ld	a,16
-		sub	c
-		cp	d
-		jr	nc,DANO4
-		ld	a,d
-DANO4:
-		ld	(CNTX),a
-		ld	a,d
-		push	af
-;		ld	a,()
-
-
+		ld	a,b
+		jr	INITLOOP1
+INITEND1:
+		call	SETSCROLL
+		call	PUTHARD
+		jp	MKBKPAGE
 
 ; === USR0 - Draw Initialize screen ===
 INIT:
@@ -1413,14 +1405,17 @@ CMD1:		db	00		;CD3E
 
 ; === Restore background ===
 RESTOREBG:
+		ld	hl,SOFTSPRITE
 		ld	a,(OPOSX)
 		and	0Fh
-		add	a,100
+		add	a,(hl)
+		inc	hl
+		inc	hl
 		ld	(DESX1),a
 		ld	a,(OPOSY)
-		add	a,100
+		add	a,(hl)
 		ld	(DESY1),a
-		ld	a,32
+		ld	a,16
 		ld	(CNTX1),a
 		ld	(CNTY1),a
 		ld	a,(MPAGE)
@@ -1429,7 +1424,7 @@ RESTOREBG:
 		ld	(SRCX1),a
 		ld	a,128
 		ld	(SRCY1),a
-		ld	a,MAP_PAGE
+		ld	a,TILE_PAGE
 		ld	(SPAGE1),a
 		ld	a,CMDLMMM
 		ld	(CMD1),a
@@ -1445,32 +1440,45 @@ RESTOREBG:
 
 ; === Put software sprites ===
 PUTSOFT:
+		ld	hl,SOFTSPRITE
 		ld	a,(POSX)
 		and	0Fh
-		add	a,100
+		add	a,(hl)
+		inc	hl
+		inc	hl
 		ld	(DESX1),a
 		ld	a,(POSY)
-		add	a,100
+		add	a,(hl)
+		inc	hl
 		ld	(DESY1),a
-		ld	a,20H
+		ld	a,16
 		ld	(CNTX1),a
 		ld	(CNTY1),a
 		ld	a,(MPAGE)
 		ld	(DPAGE1),a
-		ld	a,128
+		ld	a,(hl)
+		ld	l,a
+		rlca
+		rlca
+		rlca
+		rlca
+		and	0F0h
 		ld	(SRCX1),a
+		ld	a,l
+		and	0F0h
+		add	a,128
 		ld	(SRCY1),a
 		ld	a,TILE_PAGE
 		ld	(SPAGE1),a
-		ld	a,CMDLMMM
+		ld	a,CMDLMMM or LCMD_TIMP
 		ld	(CMD1),a
 		ld	hl,SRCX1
 		ld	b,15
 		ld	a,20h
 		jp	VDPEXEC
 
-; === Draw sprite ===
-DRAWSPRITE:
+; === Draw software sprite ===
+DRAWSOFT:
 		call	RESTOREBG
 		jp	PUTSOFT
 
