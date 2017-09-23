@@ -300,11 +300,13 @@ SETSC_WAIT2:
 		ld	a,SELRG2
 		ei
 		out	(VDPPORT),a
-		ret
 
 ; Put 32 hardware sprites
 PUTHARD:
 		exx
+		;push	bc
+		;push	de
+		;push	hl
 		ld	a,(POSX)
 		and	15
 		ld	d,a
@@ -352,6 +354,9 @@ NO_216:
 		jr	nz,LOOP_PUTHARD
 		ei
 		exx
+		;pop	hl
+		;pop	de
+		;pop	bc
 		ret
 
 ; === USR2 - Set display to page (n) ===
@@ -732,7 +737,7 @@ INIT:
 		ld	(CNTX),a
 		ld	a,CMDLMMM
 		ld	(CMD),a
-		ld	a,240
+		ld	a,0F0h
 INITLOOP1:
 		push	af
 		ld	a,(POSY)
@@ -763,7 +768,6 @@ INITNO1:
 		jr	INITLOOP1
 INITEND1:
 		call	SETSCROLL
-		call	PUTHARD
 		jp	MKBKPAGE
 
 ; === Fill horizontal block with color ===
@@ -793,37 +797,6 @@ FHBNO1:
 		ld	hl,DESX
 		ld	b,11
 		ld	a,24h
-		jp	VDPEXEC
-
-; === Copy horizontal block ===
-COPYHBAR:
-		ld	a,(POSY)
-		ld	(SRCY),a
-		ld	(DESY),a
-		ld	l,a
-		ld	a,212
-		ld	(CNTY),a
-		dec	a
-		add	a,l
-		jr	nc,CHBNO1
-		inc	a
-		ex	af,af'
-		xor	a
-		sub	l
-		ld	(CNTY),a
-		ld	hl,SRCX
-		ld	b,15
-		ld	a,20h
-		call	VDPEXEC
-		ex	af,af'
-		ld	(CNTY),a
-		xor	a
-		ld	(SRCY),a
-		ld	(DESY),a
-CHBNO1:
-		ld	hl,SRCX
-		ld	b,15
-		ld	a,20h
 		jp	VDPEXEC
 
 ; === Make back page ===
@@ -1011,7 +984,7 @@ SCROLL_RIGHT:
 		ld	(DESY),a
 		ld	a,l
 		and	a
-		jr	nz,MOVE_RIGHT
+		jp	nz,MOVE_RIGHT
 		ld	a,(MPAGE)
 		xor	1
 		ld	(MPAGE),a
@@ -1025,16 +998,16 @@ SCROLL_RIGHT:
 		push	hl
 		call	FILLHBAR
 		call	SETSCROLL
-		call	PUTHARD
 		pop	hl
-
 		xor	a
 		ld	(DESX),a
+		ld	a,(POSY)
+		ld	(DESY),a
 		ld	a,(MPAGE)
 		xor	1
 		ld	(DPAGE),a
 		ld	a,h
-		add	a,15
+		dec	a
 		and	7Fh
 		ld	(MAPX),a
 		ld	a,d
@@ -1043,70 +1016,76 @@ SCROLL_RIGHT:
 		ld	(SPAGE),a
 		ld	a,16
 		ld	(CNTX),a
-		ld	a,212
-		ld	(CNTY),a
 		ld	a,CMDHMMM
+		ld	(CMD),a
+		push	hl
+		push	de
+		call	DRAWHTILE
+		pop	de
+		pop	hl
+		ld	a,1
+		ld	(CNTX),a
+		ld	a,255
+		ld	(DESX),a
+		ld	a,(POSY)
+		ld	(DESY),a
+		ld	a,h
+		add	a,14
+		and	7Fh
+		ld	(MAPX),a
+		ld	a,d
+		ld	(MAPY),a
+		ld	a,CMDLMMM
 		ld	(CMD),a
 		jp	DRAWHTILE
 
 ; === Move right ===
 MOVE_RIGHT:
+		call	SETSCROLL
+		ld	a,(POSY)
+		ld	(DESY),a
+		ld	a,l
+		dec	a
+		ld	l,a
+		ld	(DESX),a
 		xor	a
 		ld	(COLOR),a
 		inc	a
 		ld	(CNTX),a
 		ld	a,(MPAGE)
 		ld	(DPAGE),a
-		xor	1
-		ld	(SPAGE),a
-		ld	a,l
-		dec	a
-		ld	l,a
-		ld	(SRCX),a
-		add	a,240
-		ld	(DESX),a
-		ld	a,CMDLMMM
-		ld	(CMD),a
-		push	hl
-		call	SETSCROLL
-		call	COPYHBAR
-		pop	hl
-
-		ld	a,l
-		ld	(DESX),a
 		ld	a,CMDLMMV
 		ld	(CMD),a
 		push	hl
 		call	FILLHBAR
 		pop	hl
-
-		call	PUTHARD
-
 		ld	a,l
 		add	a,240
 		ld	(DESX),a
-		ld	a,CMDLMMM
-		ld	(CMD),a
-		ld	a,(SPAGE)
-		ld	(DPAGE),a
 		ld	a,TILE_PAGE
 		ld	(SPAGE),a
+		ld	a,(MPAGE)
+		ld	(DPAGE),a
+		ld	a,CMDLMMM
+		ld	(CMD),a
 		ld	a,h
+		add	a,15
+		and	7Fh
 		ld	(MAPX),a
+		ld	a,d
+		ld	(MAPY),a
 		push	hl
+		push	de
 		call	DRAWHTILE
+		pop	de
 		pop	hl
-		ld	a,l
-		inc	a
-		cp	15
-		jr	nz,NO_CHG_PATX
-		xor	a
-NO_CHG_PATX:
-		ld	l,a
-		add	a,h
+		ld	a,h
+		add	a,l
 		inc	a
 		and	7Fh
 		ld	(MAPX),a
+		ld	a,d
+		ld	(MAPY),a
 		ld	a,l
 		rlca
 		rlca
@@ -1114,6 +1093,11 @@ NO_CHG_PATX:
 		rlca
 		and	0F0h
 		ld	(DESX),a
+		ld	a,(POSY)
+		ld	(DESY),a
+		ld	a,(MPAGE)
+		xor	1
+		ld	(DPAGE),a
 		ld	a,16
 		ld	(CNTX),a
 		ld	a,CMDHMMM
@@ -1131,134 +1115,107 @@ SCROLL_LEFT:
 		call	FETCHXY
 		ld	a,l
 		cp	15
-		jr	nz,MOVE_LEFT
+		jp	nz,MOVE_LEFT
 		ld	a,(MPAGE)
 		xor	1
 		ld	(MPAGE),a
 		ld	(DPAGE),a
-		xor	a
-		ld	(DESX),a
-		ld	(COLOR),a
-		ld	a,16
-		ld	(CNTX),a
-		ld	a,CMDHMMV
-		ld	(CMD),a
-		push	hl
-		call	FILLHBAR
 		ld	a,255
 		ld	(DESX),a
-		ld	a,1
+		inc	a
+		ld	(COLOR),a
+		inc	a
 		ld	(CNTX),a
 		ld	a,CMDLMMV
 		ld	(CMD),a
-		call	FILLHBAR
-		pop	hl
-
-		ld	a,15
-		ld	(DESX),a
-		ld	a,h
-		ld	(MAPX),a
-		ld	a,TILE_PAGE
-		ld	(SPAGE),a
-		ld	a,CMDLMMM
-		ld	(CMD),a
-
 		push	hl
-		call	DRAWHTILE
-		call	SETSCROLL
-		call	PUTHARD
-		ld	a,(MPAGE)
-		xor	1
-		ld	(DPAGE),a
-		ld	a,240
+		call	FILLHBAR
+		xor	a
 		ld	(DESX),a
 		ld	a,15
 		ld	(CNTX),a
-		call	DRAWHTILE				
+		call	FILLHBAR
+		call	SETSCROLL
 		pop	hl
-
-		ld	a,255
+		ld	a,(MPAGE)
+		xor	1
+		ld	(DPAGE),a
+		ld	a,TILE_PAGE
+		ld	(SPAGE),a
+		ld	a,240
 		ld	(DESX),a
+		ld	a,(POSY)
+		ld	(DESY),a
 		ld	a,h
 		add	a,14
 		and	7Fh
 		ld	(MAPX),a
-		ld	a,1
+		ld	a,d
+		ld	(MAPY),a
+		ld	a,16
 		ld	(CNTX),a
-		jp	DRAWHTILE		
+		ld	a,CMDHMMM
+		ld	(CMD),a
+		jp	DRAWHTILE
 
 ; === Move left ===
 MOVE_LEFT:
 		call	SETSCROLL
 		ld	a,(MPAGE)
 		ld	(DPAGE),a
-		xor	1
-		ld	(SPAGE),a
+		ld	a,l
+		add	a,240
+		ld	(DESX),a
+		ld	a,(POSY)
+		ld	(DESY),a
 		xor	a
 		ld	(COLOR),a
 		inc	a
 		ld	(CNTX),a
-		ld	a,l
-		ld	(DESX),a
-		add	a,240
-		ld	(SRCX),a
-		ld	a,CMDLMMM
-		ld	(CMD),a
-
-		push	hl
-		call	COPYHBAR
-		ld	a,(SRCX)
-		ld	(DESX),a
 		ld	a,CMDLMMV
 		ld	(CMD),a
+		push	hl
 		call	FILLHBAR
-		call	PUTHARD
 		pop	hl
-
-		ld	a,(SPAGE)
-		ld	(DPAGE),a
-		ld	a,h
-		add	a,14
-		and	7Fh
-		ld	(MAPX),a
+		ld	a,l
+		ld	(DESX),a
 		ld	a,TILE_PAGE
 		ld	(SPAGE),a
+		ld	a,h
+		ld	(MAPX),a
+		ld	a,d
+		ld	(MAPY),a
 		ld	a,CMDLMMM
 		ld	(CMD),a
-
 		push	hl
+		push	de
 		call	DRAWHTILE
+		pop	de
 		pop	hl
-
-		ld	a,16
-		ld	(CNTX),a
-		ld	a,CMDHMMM
-		ld	(CMD),a
+		ld	a,(MPAGE)
+		xor	1
+		ld	(DPAGE),a
 		ld	a,l
-		cp	14
-		jr	nz,NOT_PAT_14
-		xor	a
-		ld	(DESX),a
-		ld	a,h
-		add	a,l
-		inc	a
-		and	7Fh
-		ld	(MAPX),a
-		jp	DRAWHTILE		
-
-NOT_PAT_14:
-		inc	a
 		rlca
 		rlca
 		rlca
-		rlca		
+		rlca
 		and	0F0h
 		ld	(DESX),a
+		ld	a,16
+		ld	(CNTX),a
+		ld	a,(POSY)
+		ld	(DESY),a
 		ld	a,h
 		add	a,l
+		dec	a
 		and	7Fh
 		ld	(MAPX),a
-		jp	DRAWHTILE		
+		ld	a,d
+		ld	(MAPY),a
+		ld	a,CMDHMMM
+		ld	(CMD),a
+		jp	DRAWHTILE
 
 ; === Step down ===
 STEP_DOWN:
@@ -1359,14 +1316,12 @@ STEP_UP:
 ; === Scroll up ===
 SCROLL_UP:
 		call	STEP_UP
-		call	SETSCROLL
-		jp	PUTHARD
+		jp	SETSCROLL
 		
 ; === Scroll down ===
 SCROLL_DOWN:
 		call	STEP_DOWN
-		call	SETSCROLL
-		jp	PUTHARD
+		jp	SETSCROLL
 		
 ; === Scroll up right ===
 SCROLL_UPRIGHT:
