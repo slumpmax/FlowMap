@@ -5,4 +5,4 @@ DQ2 map and characters are used for test only.
 
 https://www.youtube.com/watch?v=hVj8Yx1czKo
 
-![flowmap](reference/flowmap.png)
+![flowmap](reference/flowmap2.png)
