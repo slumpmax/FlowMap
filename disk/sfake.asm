@@ -422,7 +422,7 @@ DHTNO1:
 		ld	(CNTY),a
 		ld	a,h
 		inc	a
-		and	7Fh
+		;and	7Fh
 		ld	h,a
 		xor	a
 		ld	c,a
