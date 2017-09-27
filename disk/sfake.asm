@@ -605,81 +605,17 @@ DVTNO2:
 
 ; === Draw tile blocks to specified area ===
 DRAWAREA:
-		ld	a,(CNTX)
-		ld	b,a
 		ld	hl,(POSX)
-		ld	a,(DESX)
-		add	a,l
-		jr	nc,DANO1
-		inc	h
-DANO1:
-		and	a
-		rra
-		jr	nc,DANO2
-		inc	b
-DANO2:
-		rlca
-		ld	l,a
-		and	0Fh
-		ld	(PATX),a
 		ld	a,l
-		rrca
-		rrca
-		rrca
-		rrca
-		and	0Fh
-		ld	l,a
-		ld	a,h
-		rlca
-		rlca
-		rlca
-		rlca
-		and	70h
-		or	l
-		ld	(MAPX),a
-		ld	a,b
-		inc	a
-		and	0FEh
-		ld	(CNTX),a
-		ld	hl,(POSY)
-		ld	a,(DESY)
+		and	15
+		ld	e,a
 		add	a,l
-		jr	nc,DANO3
+		jr	nc,DA_NO_INCH
 		inc	h
-DANO3:
-		ld	l,a
-		and	0Fh
-		ld	(PATY),a
-		ld	a,l
-		rrca
-		rrca
-		rrca
-		rrca
-		and	0Fh
-		ld	l,a
-		ld	a,h
-		rlca
-		rlca
-		rlca
-		rlca
-		and	70h
-		or	l
-		ld	(MAPY),a
-		ld	bc,(PATX)
-		ld	hl,(MAPX)
-		ld	a,(CNTX)
-		ld	d,a
-		ld	a,16
-		sub	c
-		cp	d
-		jr	nc,DANO4
-		ld	a,d
-DANO4:
-		ld	(CNTX),a
-		ld	a,d
-		push	af
-;		ld	a,()
-
+DA_NO_INCH:
+		ld	e,a
+		
+		
 
 
 ; === USR0 - Draw Initialize screen ===
@@ -1066,8 +1002,6 @@ MOVE_RIGHT:
 		ld	a,(POSY)
 		ld	(DESY),a
 		ld	a,l
-		dec	a
-		ld	l,a
 		ld	(DESX),a
 		xor	a
 		ld	(COLOR),a
