@@ -168,7 +168,7 @@ SOFT_SPRITE:
 ;                TSOFT($01, 050, 090, $02)
 
                 db      $01, 050, 050, $4A      ; C0A0
-                db      $01, 070, 050, $42
+                db      $01, 040, 150, $42
                 db      $01, 090, 050, $02
                 db      $01, 110, 050, $0A
                 db      $01, 130, 060, $12
@@ -266,24 +266,13 @@ VDPCOPY:
                 ld      b,15
                 push    ix
                 pop     hl
-                jr      VDPEXEC
-VDPFILL:
-                ld      a,24h
-                ld      b,11
-                push    ix
-                pop     hl
-                inc     hl
-                inc     hl
-                inc     hl
-                inc     hl
-VDPEXEC:
                 di
                 out     (VDPPORT),a
                 ld      a,SELRG17
                 ei
                 out     (VDPPORT),a
                 ld      c,CMDPORT
-VDPEX_WAIT:
+VDPCOPY_WAIT:
                 ld      a,2
                 di
                 out     (VDPPORT),a
@@ -296,8 +285,65 @@ VDPEX_WAIT:
                 ld      a,SELRG15
                 ei
                 out     (VDPPORT),a
-                jr      c,VDPEX_WAIT
-                otir
+                jr      c,VDPCOPY_WAIT
+                outi
+                outi
+                outi
+                outi
+                outi
+                outi
+                outi
+                outi
+                outi
+                outi
+                outi
+                outi
+                outi
+                outi
+                outi
+                ret
+
+VDPFILL:
+                ld      a,24h
+                ld      b,11
+                push    ix
+                pop     hl
+                inc     hl
+                inc     hl
+                inc     hl
+                inc     hl
+                di
+                out     (VDPPORT),a
+                ld      a,SELRG17
+                ei
+                out     (VDPPORT),a
+                ld      c,CMDPORT
+VDPFILL_WAIT:
+                ld      a,2
+                di
+                out     (VDPPORT),a
+                ld      a,SELRG15
+                out     (VDPPORT),a
+                in      a,(VDPPORT)
+                rra
+                ld      a,0
+                out     (VDPPORT),a
+                ld      a,SELRG15
+                ei
+                out     (VDPPORT),a
+                jr      c,VDPFILL_WAIT
+
+                outi
+                outi
+                outi
+                outi
+                outi
+                outi
+                outi
+                outi
+                outi
+                outi
+                outi
                 ret
         
 ; === V9938 indirect register (no DI/EI) ===
@@ -1488,10 +1534,9 @@ WLOOP:
                 ld      (HARD_OFFSET),a
                 call    PUT_HARD
                 ; call  SET_HARD
-                call    DRAW_SOFT_BACK
                 call    SETSCROLL
+                call    DRAW_SOFT_BACK
                 call    DRAW_SOFT
-                
                 pop     bc
                 dec     b
                 jr      nz,WLOOP
@@ -1696,7 +1741,6 @@ MOVE_RIGHT_X:
                 rlca
                 rlca
                 and     0F0h
-                ;ld     ix,VCMD0
                 ld      (ix + TVCMD.DESX),a
                 ld      (ix + TVCMD.CNTX),16
                 ld      a,(RAWSPEED)
@@ -1978,27 +2022,26 @@ MLX_LP:
 
 ; === Step down ===
 STEP_DOWN_X:
-                ; ld    a,(POSY)
-                ; ld    d,a
+                ld      a,(POSY)
+                ld      d,a
                 ld      a,(SPEED)
-                ; ld    b,a
-                ; ld    c,1
+                ld      b,a
+                ld      c,1
 SDX_PRE:
-                ; ld    a,c
-                ; ld    (RAWSPEED),a
-                ; sla   c
-                ; rr    b
-                ; jr    c,SDX_BEGIN
-                ; rr    d
-                ; push  de
-                ; push  bc
-                ; call  c,SDX_BEGIN
-                ; pop   bc
-                ; pop   de
-                ; ld    a,c
-                ; cp    16
-                ; jr    nz,SDX_PRE
-                ; ld    (RAWSPEED),a
+                ld      a,c
+                ld      (RAWSPEED),a
+                sla     c
+                rr      b
+                jr      c,SDX_BEGIN
+                rr      d
+                push    de
+                push    bc
+                call    c,SDX_BEGIN
+                pop     bc
+                pop     de
+                ld      a,c
+                cp      16
+                jr      nz,SDX_PRE
                 ld      (RAWSPEED),a
 SDX_BEGIN:
                 ld      hl,(POSY)
@@ -2035,13 +2078,31 @@ SDX_BEGIN:
                 ld      (iy + TRECT.PAGE),a
 
                 jp      DRAW_BACK_RECT
-                ret
 
 ; === Step up ===
-STEP_UP:
+STEP_UP_X:
+                ld      a,(POSY)
+                ld      d,a
                 ld      a,(SPEED)
+                ld      b,a
+                ld      c,1
+SUX_PRE:
+                ld      a,c
                 ld      (RAWSPEED),a
-STX_BEGIN:
+                sla     c
+                rr      b
+                jr      c,SUX_BEGIN
+                rr      d
+                push    de
+                push    bc
+                call    c,SUX_BEGIN
+                pop     bc
+                pop     de
+                ld      a,c
+                cp      16
+                jr      nz,SUX_PRE
+                ld      (RAWSPEED),a
+SUX_BEGIN:
                 ld      hl,(POSY)
                 ld      a,(RAWSPEED)
                 ld      c,a
@@ -2077,7 +2138,7 @@ STX_BEGIN:
 
 ; === Scroll up ===
 SCROLL_UP:
-                call    STEP_UP
+                call    STEP_UP_X
                 call    PUT_HARD
                 call    SETSCROLL
                 call    DRAW_SOFT_BACK
@@ -2093,7 +2154,7 @@ SCROLL_DOWN:
                 
 ; === Scroll up right ===
 SCROLL_UPRIGHT:
-                call    STEP_UP
+                call    STEP_UP_X
                 jp      SCROLL_RIGHT_X
                 
 ; === Scroll down right ===
@@ -2108,7 +2169,7 @@ SCROLL_DOWNLEFT:
                 
 ; === Scroll up left ===
 SCROLL_UPLEFT:
-                call    STEP_UP
+                call    STEP_UP_X
                 jp      SCROLL_LEFT_X
                 
 ; === Read MAP at 0000h ===
@@ -2454,6 +2515,11 @@ HWALK_LP:
                 ld      ix,SOFT_SPRITE
                 ld      b,MAX_SOFT_SPR
                 ld      de,SIZE(TSOFT)
+                dec     (ix + TSOFT.PX)
+                dec     (ix + TSOFT.PX)
+                dec     (ix + TSOFT.PY)
+                dec     (ix + TSOFT.PY)
+                dec     (ix + TSOFT.PY)
 SWALK_LP:
                 ld      a,(ix + TSOFT.ID)
                 xor     1
@@ -2464,9 +2530,9 @@ SWALK_LP:
 
 ; === Sprite walk with control ===
 SWALK_CONTROL:
-                ld      ix,SOFT_SPRITE
+                ld      ix,SOFT_SPRITE + SIZE(TSOFT) * 2
                 ld      de,SIZE(TSOFT)
-                ld      b,MAX_SOFT_SPR
+                ld      b,MAX_SOFT_SPR - 2
 SOFTWALK_LP:
                 inc     (ix + TSOFT.PX)
                 inc     (ix + TSOFT.PX)
