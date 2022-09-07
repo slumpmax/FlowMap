@@ -2,21 +2,24 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   xmlns:dc="http://purl.org/dc/elements/1.1/"
-   xmlns:cc="http://creativecommons.org/ns#"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-   xmlns:svg="http://www.w3.org/2000/svg"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:xlink="http://www.w3.org/1999/xlink"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    width="223.3987mm"
    height="271.72711mm"
    viewBox="0 0 223.3987 271.72711"
    version="1.1"
    id="svg8"
-   inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
-   sodipodi:docname="layout.svg">
+   inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)"
+   sodipodi:docname="layout.svg"
+   inkscape:export-filename="layout.png"
+   inkscape:export-xdpi="96.0689"
+   inkscape:export-ydpi="96.0689"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
   <defs
      id="defs2">
     <clipPath
@@ -83,8 +86,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.77409924"
-     inkscape:cx="252.24915"
-     inkscape:cy="476.46701"
+     inkscape:cx="204.1082"
+     inkscape:cy="477.32898"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -93,10 +96,13 @@
      fit-margin-right="0"
      fit-margin-bottom="0"
      inkscape:window-width="1920"
-     inkscape:window-height="1017"
+     inkscape:window-height="1009"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
-     inkscape:window-maximized="1" />
+     inkscape:window-maximized="1"
+     inkscape:showpageshadow="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1" />
   <metadata
      id="metadata5">
     <rdf:RDF>
@@ -105,7 +111,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -215,20 +221,18 @@
        id="rect3739"
        style="fill:#ffcc00;fill-opacity:1;stroke:none;stroke-width:0.79374999;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none" />
     <image
-       sodipodi:absref="D:\OneDrive\Taizhang\Develop\MSX\Projects\FlowMap\graphic\dq2pat0a.gif"
        y="16.064598"
        x="140.39308"
        id="image3749"
-       xlink:href="file:///D:/OneDrive/Taizhang/Develop/MSX/Projects/FlowMap/graphic/dq2pat0a.gif"
+       xlink:href="../graphic/dq2pat0a.gif"
        preserveAspectRatio="none"
        height="56.091667"
        width="67.73333" />
     <image
-       sodipodi:absref="D:\OneDrive\Taizhang\Develop\MSX\Projects\FlowMap\disk\dq2map2.png"
        y="124.47155"
        x="302.74576"
        id="image3771"
-       xlink:href="file:///D:/OneDrive/Taizhang/Develop/MSX/Projects/FlowMap/disk/dq2map2.png"
+       xlink:href="../disk/dq2map2.png"
        preserveAspectRatio="none"
        height="56.091667"
        width="67.733337"
@@ -242,17 +246,15 @@
        width="67.733337"
        height="56.091667"
        preserveAspectRatio="none"
-       xlink:href="file:///D:/OneDrive/Taizhang/Develop/MSX/Projects/FlowMap/disk/dq2map2.png"
+       xlink:href="../disk/dq2map2.png"
        id="image3780"
        x="219.39009"
-       y="144.28412"
-       sodipodi:absref="D:\OneDrive\Taizhang\Develop\MSX\Projects\FlowMap\disk\dq2map2.png" />
+       y="144.28412" />
     <image
-       sodipodi:absref="D:\OneDrive\Taizhang\Develop\MSX\Projects\FlowMap\graphic\dq2pat0b.gif"
        y="72.156265"
        x="222.48952"
        id="image3760"
-       xlink:href="file:///D:/OneDrive/Taizhang/Develop/MSX/Projects/FlowMap/graphic/dq2pat0b.gif"
+       xlink:href="../graphic/dq2pat0b.gif"
        preserveAspectRatio="none"
        height="56.091667"
        width="67.73333"
@@ -262,11 +264,10 @@
        width="67.73333"
        height="56.091667"
        preserveAspectRatio="none"
-       xlink:href="file:///D:/OneDrive/Taizhang/Develop/MSX/Projects/FlowMap/graphic/dq2pat0a.gif"
+       xlink:href="../graphic/dq2pat0a.gif"
        id="image3782"
        x="218.25624"
-       y="16.064598"
-       sodipodi:absref="D:\OneDrive\Taizhang\Develop\MSX\Projects\FlowMap\graphic\dq2pat0a.gif" />
+       y="16.064598" />
     <rect
        inkscape:transform-center-y="-68.413691"
        inkscape:transform-center-x="0.75595238"
@@ -294,17 +295,15 @@
        width="67.733337"
        height="56.091667"
        preserveAspectRatio="none"
-       xlink:href="file:///D:/OneDrive/Taizhang/Develop/MSX/Projects/FlowMap/disk/dq2map2.png"
+       xlink:href="../disk/dq2map2.png"
        id="image3806"
        x="219.39009"
-       y="144.28412"
-       sodipodi:absref="D:\OneDrive\Taizhang\Develop\MSX\Projects\FlowMap\disk\dq2map2.png" />
+       y="144.28412" />
     <image
-       sodipodi:absref="D:\OneDrive\Taizhang\Develop\MSX\Projects\FlowMap\disk\dq2map2.png"
        y="190.40906"
        x="302.74576"
        id="image3808"
-       xlink:href="file:///D:/OneDrive/Taizhang/Develop/MSX/Projects/FlowMap/disk/dq2map2.png"
+       xlink:href="../disk/dq2map2.png"
        preserveAspectRatio="none"
        height="56.091667"
        width="67.733337"
